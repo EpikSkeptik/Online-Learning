@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Navbar Effect</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a data-page="home" href="#">Home</a></li>
+                    <li><a data-page="about" href="#">About</a></li>
+                    <li><a data-page="services" href="#">Services</a></li>
+                    <li><a data-page="contact" href="#">Contact</a></li>
+                    <div class="trans"></div>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section data-index="0" class="home">
+                <img src="img/1.jpg" alt="1">
+            </section>
+
+            <section data-index="1" class="about">
+                <img src="img/2.jpg" alt="2">
+            </section>
+
+            <section data-index="2" class="services">
+                <img src="img/3.jpg" alt="3">
+            </section>
+
+            <section data-index="3" class="contact">
+                <img src="img/4.jpg" alt="4">
+            </section>
+        </main>
+        
+        <script src="app.js" ></script>
+    </body>
+</html>
