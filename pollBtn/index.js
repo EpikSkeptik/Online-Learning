@@ -1,22 +1,37 @@
 const pollBtn = document.querySelector('.btn')
+const intervalBtn = document.querySelector('.interval-btn');
+
 let tog = false;
+let intervalOn = true;
 
-
-pollBtn.addEventListener('mouseover', function() {
+pollBtn.addEventListener('mousedown', function() {
     tog = true;
 });
 
-pollBtn.addEventListener('mouseout', function() {
+pollBtn.addEventListener('mouseup', function() {
     tog = false;
 });
 
-function polling () {
-    if (tog) {
-        pollBtn.classList.add('active');
-    } else {
-        pollBtn.classList.remove('active');
-    }
-    setTimeout(polling, 1000);
-}
+intervalBtn.addEventListener('click', function() {
+    intervalOn = !intervalOn;
+    pollBtn.classList.toggle('disabled');
+    polling();
+});
 
-polling()
+
+function polling () {
+    if(intervalOn) {
+        if (tog) {
+            pollBtn.classList.add('active');
+        } else {
+            pollBtn.classList.remove('active');
+        }
+        setTimeout(polling, 1000);
+    } else {
+        pollBtn.classList.toggle('disabled');
+    }
+}
+     
+   
+
+polling();

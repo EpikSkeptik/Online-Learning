@@ -12,6 +12,18 @@ body {
     align-items: center;
 }
 
+.interval-btn {
+    
+    background: steelblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .btn {
     
     background: tomato;
@@ -20,10 +32,19 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .btn.active {
     background:cadetblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn.disabled {
+    background:#111;
     color: #fff;
     border: none;
     border-radius: 5px;
