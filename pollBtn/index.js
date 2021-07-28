@@ -14,8 +14,11 @@ pollBtn.addEventListener('mouseup', function() {
 
 intervalBtn.addEventListener('click', function() {
     intervalOn = !intervalOn;
+    intervalBtn.classList.toggle('active');
+    
     pollBtn.classList.toggle('disabled');
     polling();
+
 });
 
 
@@ -26,7 +29,7 @@ function polling () {
         } else {
             pollBtn.classList.remove('active');
         }
-        setTimeout(polling, 1000);
+        setInterval(polling, 1000);
     } else {
         pollBtn.classList.toggle('disabled');
     }

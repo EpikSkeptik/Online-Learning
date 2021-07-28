@@ -24,6 +24,17 @@ body {
     cursor: pointer;
 }
 
+.interval-btn.active {
+    background: rgb(110, 154, 190);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .btn {
     
     background: tomato;
@@ -49,4 +60,5 @@ body {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
+    cursor: default;
 }
