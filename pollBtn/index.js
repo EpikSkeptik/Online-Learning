@@ -3,6 +3,7 @@ const intervalBtn = document.querySelector('.interval-btn');
 
 let tog = false;
 let intervalOn = true;
+let interval = 1000;
 
 pollBtn.addEventListener('mousedown', function() {
     tog = true;
@@ -29,7 +30,7 @@ function polling () {
         } else {
             pollBtn.classList.remove('active');
         }
-        setInterval(polling, 1000);
+        setInterval(polling, interval);
     } else {
         pollBtn.classList.toggle('disabled');
     }
