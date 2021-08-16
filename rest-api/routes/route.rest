@@ -1,0 +1,22 @@
+GET http://localhost:3000/subscribers
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Cool Cat",
+    "subscribedToChannel": "WDYM Entertainment"
+}
+###
+GET http://localhost:3000/subscribers/611ab296b7817d119cd30d0f
+###
+
+DELETE http://localhost:3000/subscribers/
+
+###
+PATCH http://localhost:3000/subscribers/611ab296b7817d119cd30d0f
+Content-Type: application/json
+
+{
+    "name": "Cold Cat"
+}
